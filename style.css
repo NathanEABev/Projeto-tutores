@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+aside {
+    margin: 20px 0;
+    padding: 0 10px;
+}
+
+#dife {
+    margin-bottom: 0;
+}
+
+h1, h2, p {
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 7px 10px;
+    border-radius: 15px;
+}
+
+#dSerie, #dAluno, #dTurno {
+    padding: 0 10PX;
+}
+
+#dTutor {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+button {
+    margin-left: 20px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: rgb(28, 91, 226);
+}
+
+button:hover {
+    background-color: rgb(20, 66, 165);
+}
+
+#add {
+    display: none;
+    flex-direction: column;
+    min-width: 500px;
+    height: 175px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid black;
+    z-index: 3;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+}
+
+#add img {
+    align-self: flex-end;
+    width: 15px;
+}
+
+#add img:hover {
+    background-color: rgba(255, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+#add h1, #add input {
+    align-self: flex-start;
+}
+
+#add input {
+    margin-left: 10px;
+    width: 470px;
+}
+
+#add button {
+    width: 100px;
+    margin: 20px auto;
+}
+
+#pErroTutor, #pErroEnvia {
+    color: red;
+    margin: 5px 20px 15px;
+    font-size: 20px;
+}
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
+}
+
+#popConfirma {
+    display: none;
+    flex-direction: column;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid black;
+    z-index: 3;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    width: 200px;
+    height: 250px;
+}
+
+#popConfirma img {
+    align-self: flex-end;
+    width: 15px;
+}
+
+#popConfirma img:hover {
+    background-color: rgba(255, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+#popConfirma button {
+    margin: 20px auto;
+}
+
+#dados {
+    text-align: left;
+    align-self: start;
+}
