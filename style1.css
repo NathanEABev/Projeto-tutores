@@ -5,7 +5,12 @@
 
 /*main {
     filter: blur(5px);
-}*/
+    }*/
+    
+aside {
+    margin: 10px 0;
+    padding: 0 10px;
+}
 
 #fichas {
     width: calc(100% - 40px);
@@ -21,21 +26,55 @@
 
 .iten {
     background-color: white;
-    min-width: 250px;
+    width: 350px;
     height: 400px;
     flex-shrink: 0;
     border-radius: 5px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-    padding: 10px 20px;
+    padding: 10px 0 0;
+    overflow-y: auto;
+}
+
+.td-tutores, .td-serie {
+    width: 20%;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+td.texto {
+    text-align: left;
+}
+
+td.checkbox {
+    text-align: center;
+    width: 50px;
+}
+
+tr:hover {
+    background-color: #d1e7dd;
+    cursor: pointer;
 }
 
 h1 {
     margin-bottom: 10px;
-}
-
-aside {
-    margin: 10px 0;
-    padding: 0 10px;
 }
 
 #Afichas {
@@ -113,39 +152,6 @@ button:hover {
     overflow-y: auto;
     width: 100%;
     margin-top: 10px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: sans-serif;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-tr:nth-child(odd) {
-    background-color: #ffffff;
-}
-
-td {
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-td.texto {
-    text-align: left;
-}
-
-td.checkbox {
-    text-align: center;
-    width: 50px;
-}
-
-tr:hover {
-    background-color: #d1e7dd;
-    cursor: pointer;
 }
 
 #dBut {
