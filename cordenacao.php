@@ -1,0 +1,292 @@
+<?php
+require 'classes/conn.php';
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados da Coordenação</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header><a href="index.php">voltar</a></header>
+    <main>
+        <aside id="Afichas">
+            <h1>Ficha de Tutores:</h1>
+            <div id="fichas">
+                <div class="iten" id="1">
+                        <h1>1</h1>
+                        <table>
+                            <tr>
+                                <td class="base">Nome</td>
+                                <td  class="td-serie">Série</td>
+                                <td class="td-tutores">Tutores</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td class="td-serie">2</td>
+                                <td class="td-tutores"><span class="abOPs">Mostrar</span></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td class="td-serie">2</td>
+                                <td class="td-tutores"><span class="abOPs">Mostrar</span></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td class="td-serie">2</td>
+                                <td class="td-tutores"><span class="abOPs">Mostrar</span></td>
+                            </tr>
+                        </table>
+                </div>
+                <div class="iten" id="2">
+                    <h1>2</h1>
+                    <table>
+                        <tr>
+                            <td class="base">Nome</td>
+                            <td  class="td-serie">Série</td>
+                            <td class="td-tutores">Tutores</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td class="td-serie">2</td>
+                            <td class="td-tutores"><span class="abOPs">Mostrar</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="iten" id="3">
+                    <h1>3</h1>
+                    <table>
+                        <tr>
+                            <td class="base">Nome</td>
+                            <td  class="td-serie">Série</td>
+                            <td class="td-tutores">Tutores</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td class="td-serie">2</td>
+                            <td class="td-tutores"><span class="abOPs">Mostrar</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="iten" id="4">
+                    <h1>4</h1>
+                    <table>
+                        <tr>
+                            <td class="base">Nome</td>
+                            <td  class="td-serie">Série</td>
+                            <td class="td-tutores">Tutores</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td class="td-serie">2</td>
+                            <td class="td-tutores"><span class="abOPs">Mostrar</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="iten" id="5">
+                    <h1>5</h1>
+                    <table>
+                        <tr>
+                            <td class="base">Nome</td>
+                            <td  class="td-serie">Série</td>
+                            <td class="td-tutores">Tutores</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td class="td-serie">2</td>
+                            <td class="td-tutores"><span class="abOPs">Mostrar</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="iten" id="6">
+                    <h1>6</h1>
+                    <table>
+                        <tr>
+                            <td class="base">Nome</td>
+                            <td  class="td-serie">Série</td>
+                            <td class="td-tutores">Tutores</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td class="td-serie">2</td>
+                            <td class="td-tutores"><span class="abOPs">Mostrar</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="iten" id="7">
+                    <h1>7</h1>
+                    <table>
+                        <tr>
+                            <td class="base">Nome</td>
+                            <td  class="td-serie">Série</td>
+                            <td class="td-tutores">Tutores</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td class="td-serie">2</td>
+                            <td class="td-tutores"><span class="abOPs">Mostrar</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="iten" id="8">
+                    <h1>8</h1>
+                    <table>
+                        <tr>
+                            <td class="base">Nome</td>
+                            <td  class="td-serie">Série</td>
+                            <td class="td-tutores">Tutores</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td class="td-serie">2</td>
+                            <td class="td-tutores"><span class="abOPs">Mostrar</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </aside>
+        <aside>
+            <h1>Séries ativas:</h1>
+            <button id="atPopSala">Gerenciar séries ativas</button>
+            <div id="popSala">
+                <img src="close.png" id="fechaPop">
+                <h3>Gerenciador de séries</h3>
+                <div id="scroll">
+                    <h4>Fundamental</h4>
+                    <table>
+                        <tr>
+                            <td class="texto">6º A</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">6º B</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">6º C</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">6º D</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">7º A</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">7º B</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">7º C</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">7º D</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">8º A</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">8º B</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">8º C</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">8º D</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">9º A</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">9º B</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">9º C</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">9º D</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                    </table>
+                    <h4 id="meio">Médio</h4>
+                    <table>
+                        <tr>
+                            <td class="texto">1º A</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">1º B</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">1º C</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">1º D</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">2º A</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">2º B</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">2º C</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">2º D</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">3º A</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">3º B</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">3º C</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="texto">3º D</td>
+                            <td class="checkbox"><input type="checkbox"></td>
+                        </tr>
+                    </table>
+                    <div id="dBut"><button id="serAlt">Salvar alterações</button></div>
+                </div>
+            </div>
+        </aside>
+        <aside>
+            <h1>Gerenciar salas:</h1>
+            <p>precisa dar um jeito no bd primeiro</p>
+        </aside>
+        <aside>
+            <h1>Tutores:</h1>
+        </aside>
+        <p><a href="index.html">Tirar depois de programar</a></p>
+        <div id="overlay1"></div>
+    </main>
+
+    <script src="script1.js"></script>
+</body>
+</html>

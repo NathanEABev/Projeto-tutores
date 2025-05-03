@@ -3,7 +3,7 @@
 const seleTurno = document.getElementById("sTurno")
 var turnoAti = "seleTur"
 
-seleTurno.addEventListener("change", function() {
+seleTurno.addEventListener("change", function () {
     turnoAti = seleTurno.value
 });
 
@@ -12,7 +12,7 @@ seleTurno.addEventListener("change", function() {
 const seleSerie = document.getElementById("sTurma")
 var serieAti = "seleSer"
 
-seleSerie.addEventListener("change", function() {
+seleSerie.addEventListener("change", function () {
     serieAti = seleSerie.value
 });
 
@@ -21,7 +21,7 @@ seleSerie.addEventListener("change", function() {
 const seleAluno = document.getElementById("sAluno")
 var alunoAti = "seleAlu"
 
-seleAluno.addEventListener("change", function() {
+seleAluno.addEventListener("change", function () {
     alunoAti = seleAluno.value
 });
 
@@ -30,7 +30,7 @@ seleAluno.addEventListener("change", function() {
 const SelePrimeira = document.getElementById("primeira")
 var priAti = "selePri"
 
-SelePrimeira.addEventListener("change", function() {
+SelePrimeira.addEventListener("change", function () {
     priAti = SelePrimeira.value
 });
 
@@ -39,7 +39,7 @@ SelePrimeira.addEventListener("change", function() {
 const SeleSegunda = document.getElementById("segunda")
 var segAti = "seleSeg"
 
-SeleSegunda.addEventListener("change", function() {
+SeleSegunda.addEventListener("change", function () {
     segAti = SeleSegunda.value
 });
 
@@ -48,7 +48,7 @@ SeleSegunda.addEventListener("change", function() {
 const SeleTerceira = document.getElementById("terceira")
 var terAti = "seleTer"
 
-SeleTerceira.addEventListener("change", function() {
+SeleTerceira.addEventListener("change", function () {
     terAti = SeleTerceira.value
 });
 
@@ -95,8 +95,8 @@ addAlu.addEventListener("click", addAlunos)
 
 //habilitar select da serie
 
-seleTurno.addEventListener("change", function() {
-    if(turnoAti != "seleTur") {
+seleTurno.addEventListener("change", function () {
+    if (turnoAti != "seleTur") {
         seleSerie.innerHTML = '<option value="seleSer" selected>Selecione a série</option>'
         seleSerie.disabled = false
 
@@ -121,8 +121,8 @@ seleTurno.addEventListener("change", function() {
 
 //habilitar selects dos alunos
 
-seleSerie.addEventListener("change", function() {
-    if(serieAti != "seleSer") {
+seleSerie.addEventListener("change", function () {
+    if (serieAti != "seleSer") {
         seleAluno.innerHTML = '<option value="seleAlu" selected>Selecione seu nome</option>'
         seleAluno.disabled = false
         addAlu.disabled = false
@@ -149,25 +149,30 @@ const bAdd = document.getElementById("add")
 function addAlunos() {
     cobre.style.display = "block"
     bAdd.style.display = "flex"
+    const novoAluno = document.getElementById("addNome");
 
     const fecha = document.getElementById("fecha")
-    fecha.addEventListener("click", function() {
+    fecha.addEventListener("click", function () {
         cobre.style.display = "none"
         bAdd.style.display = "none"
-        document.getElementById("addNome").value = "";
+        novoAluno.value = "";
     })
 
     const confirma = document.getElementById("confirma")
-    confirma.addEventListener("click", function() {
-        const novoAluno = document.getElementById("addNome").value.trim()
-        if(!novoAluno) return
-        
+    confirma.addEventListener("click", function () {
+        let name = novoAluno.value.trim();
+
+        if (!name) {
+            novoAluno.style.outline = "1px solid red";
+            return;
+        }
+
         cobre.style.display = "none"
         bAdd.style.display = "none"
 
-        if(serieAti && serieAti !== "seleSer") {
-            if (!opAlunos[serieAti].includes(novoAluno)) {
-                opAlunos[serieAti].push(novoAluno)
+        if (serieAti && serieAti !== "seleSer") {
+            if (!opAlunos[serieAti].includes(name)) {
+                opAlunos[serieAti].push(name)
             }
 
             seleAluno.innerHTML = '<option value="seleAlu" selected>Selecione seu nome</option>'
@@ -190,24 +195,24 @@ const erroEnvio = document.getElementById("pErroEnvia")
 
 //analise do envio
 
-enviar.addEventListener("click", function() {
-    if(turnoAti === "seleTur" || serieAti === "seleSer" || alunoAti === "seleAlu" || priAti === "selePri" || segAti === "seleSeg" || terAti === "seleTer") { 
+enviar.addEventListener("click", function () {
+    if (turnoAti === "seleTur" || serieAti === "seleSer" || alunoAti === "seleAlu" || priAti === "selePri" || segAti === "seleSeg" || terAti === "seleTer") {
         erroEnvio.innerText = "Preencha todos as campos a cima"
     } else if (priAti == segAti || priAti == terAti || segAti == terAti) {
         erroEnvio.innerText = 'Uma ou mais opções iguais'
     } else {
         erroEnvio.innerText = ""
-        
+
         document.getElementById("dados").innerHTML = `<strong>Turno:</strong> ${seleTurno.querySelector(`option[value="${turnoAti}"]`).textContent}<br><strong>Série:</strong> ${seleSerie.querySelector(`option[value="${serieAti}"]`).textContent}<br><strong>Aluno:</strong> ${seleAluno.querySelector(`option[value="${alunoAti}"]`).textContent}<br><strong>Primeira opção:</strong> ${SelePrimeira.querySelector(`option[value="${priAti}"]`).textContent}<br><strong>Segunda opção:</strong> ${SeleSegunda.querySelector(`option[value="${segAti}"]`).textContent}<br><strong>Terceira opção:</strong> ${SeleTerceira.querySelector(`option[value="${terAti}"]`).textContent}`
 
         document.getElementById("popConfirma").style.display = "flex"
         cobre.style.display = "block"
 
-        document.getElementById("fechaC").addEventListener("click", function() {
+        document.getElementById("fechaC").addEventListener("click", function () {
             document.getElementById("popConfirma").style.display = "none"
             cobre.style.display = "none"
         })
-   }
+    }
 });
 
 //enviar confirmação
@@ -220,7 +225,7 @@ document.getElementById("enviar").addEventListener("click", function () {
         "&escolha1=" + encodeURIComponent(priAti) +
         "&escolha2=" + encodeURIComponent(segAti) +
         "&escolha3=" + encodeURIComponent(terAti);
-    
+
     console.log(dados)
 
     fetch("salva.php", {
@@ -230,8 +235,8 @@ document.getElementById("enviar").addEventListener("click", function () {
         },
         body: dados
     })
-    .then(response => response.text())
-    .then(data => {
-        alert(data);
-    });
+        .then(response => response.text())
+        .then(data => {
+            alert(data);
+        });
 });
