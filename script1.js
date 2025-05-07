@@ -22,3 +22,10 @@ abPSala.addEventListener("click", function() {
         overlay1.style.display = "none"
     })
 })
+
+var hover = document.getElementsByClassName("abOPs")[all]
+hover.addEventListener("mouseover", abOps())
+
+function abOps() {
+    alert("teste")
+}
